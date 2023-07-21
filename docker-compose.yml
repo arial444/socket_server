@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+  socket_server:
+    image: ${DOCKER_REGISTRY-}
+    build:
+      context: .

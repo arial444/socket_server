@@ -1,0 +1,15 @@
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\bin\Debug\net6.0\DotNet.Docker.exe
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\bin\Debug\net6.0\DotNet.Docker.deps.json
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\bin\Debug\net6.0\DotNet.Docker.runtimeconfig.json
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\bin\Debug\net6.0\DotNet.Docker.dll
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\bin\Debug\net6.0\ref\DotNet.Docker.dll
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\bin\Debug\net6.0\DotNet.Docker.pdb
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.dll
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\ref\DotNet.Docker.dll
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.pdb
+\\wsl.localhost\Ubuntu\home\arial444\sources\Socket_Server\obj\Debug\net6.0\DotNet.Docker.genruntimeconfig.cache

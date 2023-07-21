@@ -1,0 +1,15 @@
+/home/arial444/sources/Socket_Server/SERVER/socket_server/bin/Debug/net6.0/DotNet.Docker
+/home/arial444/sources/Socket_Server/SERVER/socket_server/bin/Debug/net6.0/DotNet.Docker.deps.json
+/home/arial444/sources/Socket_Server/SERVER/socket_server/bin/Debug/net6.0/DotNet.Docker.runtimeconfig.json
+/home/arial444/sources/Socket_Server/SERVER/socket_server/bin/Debug/net6.0/DotNet.Docker.dll
+/home/arial444/sources/Socket_Server/SERVER/socket_server/bin/Debug/net6.0/ref/DotNet.Docker.dll
+/home/arial444/sources/Socket_Server/SERVER/socket_server/bin/Debug/net6.0/DotNet.Docker.pdb
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.csproj.AssemblyReference.cache
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.GeneratedMSBuildEditorConfig.editorconfig
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.AssemblyInfoInputs.cache
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.AssemblyInfo.cs
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.csproj.CoreCompileInputs.cache
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.dll
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/ref/DotNet.Docker.dll
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.pdb
+/home/arial444/sources/Socket_Server/SERVER/socket_server/obj/Debug/net6.0/DotNet.Docker.genruntimeconfig.cache

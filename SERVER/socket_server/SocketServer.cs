@@ -18,7 +18,8 @@ public class SocketListener
         // Get Host IP Address that is used to establish a connection
         // In this case, we get one IP address of localhost that is IP : 127.0.0.1
         // If a host has multiple addresses, you will get a list of addresses
-        IPHostEntry host = Dns.GetHostEntry("localhost");
+        //IPHostEntry host = Dns.GetHostEntry("localhost");
+        IPHostEntry host = Dns.GetHostEntry("192.168.1.42");
         IPAddress ipAddress = host.AddressList[0];
         IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 1080);
 
@@ -38,22 +39,33 @@ public class SocketListener
              // Incoming data from the client.
              string data = null;
              byte[] bytes = null;
+             int bytesRec = 0;
+
+            bytes = new byte[1024];
+            bytesRec = handler.Receive(bytes);
+            data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+            if (data.IndexOf("<EOF>") > -1)
+            {
+                IPEndPoint remoteIpEndPoint = handler.RemoteEndPoint as IPEndPoint;
+                Console.WriteLine(remoteIpEndPoint + " is connected");
+                Console.WriteLine("Text received : {0}", data);
+                
+
+                byte[] msg = Encoding.ASCII.GetBytes(data);
+                handler.Send(msg);
+                msg = Encoding.ASCII.GetBytes("Please chose a number: ");
+                handler.Send(msg);
+                data = null;
+            }
 
             while (true)
             {
                 bytes = new byte[1024];
-                int bytesRec = handler.Receive(bytes);
+                bytesRec = handler.Receive(bytes);
                 data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                if (data.IndexOf("<EOF>") > -1)
-                {
-                    break;
-                }
+                Console.WriteLine("Text received : {0}", data);
             }
 
-            Console.WriteLine("Text received : {0}", data);
-
-            byte[] msg = Encoding.ASCII.GetBytes(data);
-            handler.Send(msg);
             handler.Shutdown(SocketShutdown.Both);
             handler.Close();
         }

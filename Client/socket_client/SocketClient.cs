@@ -24,7 +24,8 @@ public class SocketClient
             // Get Host IP Address that is used to establish a connection
             // In this case, we get one IP address of localhost that is IP : 127.0.0.1
             // If a host has multiple addresses, you will get a list of addresses
-            IPHostEntry host = Dns.GetHostEntry("localhost");
+            IPHostEntry host = Dns.GetHostEntry("192.168.1.42");
+            //IPHostEntry host = Dns.GetHostEntry('127.0.0.1');
             IPAddress ipAddress = host.AddressList[0];
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, 1080);
 
@@ -41,16 +42,30 @@ public class SocketClient
                 Console.WriteLine("Socket connected to {0}",
                     sender.RemoteEndPoint.ToString());
 
+                // Passing data to the server.
+                byte[] msg = null;
+                int bytesSent = 0;
+                int bytesRec = 0;
+
                 // Encode the data string into a byte array.
-                byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
+                msg = Encoding.ASCII.GetBytes("<EOF>");
 
                 // Send the data through the socket.
-                int bytesSent = sender.Send(msg);
+                bytesSent = sender.Send(msg);
 
                 // Receive the response from the remote device.
-                int bytesRec = sender.Receive(bytes);
+                bytesRec = sender.Receive(bytes);
                 Console.WriteLine("Echoed test = {0}",
                     Encoding.ASCII.GetString(bytes, 0, bytesRec));
+
+                while (true) {
+                    string text = Console.ReadLine();
+                    msg = Encoding.ASCII.GetBytes(text);
+                    bytesSent = sender.Send(msg);
+                    bytesRec = sender.Receive(bytes);
+                    Console.WriteLine("Echoed test = {0}",
+                        Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                }
 
                 // Release the socket.
                 sender.Shutdown(SocketShutdown.Both);

@@ -24,9 +24,7 @@ public class SocketClient
             // Get Host IP Address that is used to establish a connection
             // In this case, we get one IP address of localhost that is IP : 127.0.0.1
             // If a host has multiple addresses, you will get a list of addresses
-            IPHostEntry host = Dns.GetHostEntry("192.168.1.42");
-            //IPHostEntry host = Dns.GetHostEntry('127.0.0.1');
-            IPAddress ipAddress = host.AddressList[0];
+            IPAddress ipAddress = IPAddress.Parse("172.29.250.160");;
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, 1080);
 
             // Create a TCP/IP  socket.
@@ -55,15 +53,16 @@ public class SocketClient
 
                 // Receive the response from the remote device.
                 bytesRec = sender.Receive(bytes);
-                Console.WriteLine("Echoed test = {0}",
+                Console.WriteLine("{0}",
                     Encoding.ASCII.GetString(bytes, 0, bytesRec));
 
                 while (true) {
-                    string text = Console.ReadLine();
+                    string text = " ";
+                    text += Console.ReadLine();
                     msg = Encoding.ASCII.GetBytes(text);
                     bytesSent = sender.Send(msg);
                     bytesRec = sender.Receive(bytes);
-                    Console.WriteLine("Echoed test = {0}",
+                    Console.WriteLine("{0}",
                         Encoding.ASCII.GetString(bytes, 0, bytesRec));
                 }
 

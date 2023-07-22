@@ -64,13 +64,14 @@ public class SocketClient
                     bytesRec = sender.Receive(bytes);
                     Console.WriteLine("{0}",
                         Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                    // Release the socket.
+                    if (text == " -disconnect") {
+                        sender.Shutdown(SocketShutdown.Both);
+                        sender.Close();
+                    }
                 }
-
-                // Release the socket.
-                sender.Shutdown(SocketShutdown.Both);
-                sender.Close();
-
             }
+
             catch (ArgumentNullException ane)
             {
                 Console.WriteLine("ArgumentNullException : {0}", ane.ToString());
